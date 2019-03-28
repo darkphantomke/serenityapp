@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WELCOME | Serenity Security Solutions</title>
+  <base href="/">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ng-app">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="favicon.ico?v=1.1">
+     
+  
+  <link id="skin" href="../assets/dist/css/styles.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/dist/revolution/css/styles.min.css">
+   
+</head>
+<body>
+  <app-root>
+    <!-- Start preloading -->
+	  <div id="loading" class="loading-invisible">
+      <div class="loading-center">
+        <br /><br /><br /><br /><br /><br />  <br /><br /><br /><br /><br />
+        <img src="../assets/img/brand/serenity_logo.svg" style="padding-right: 9px;" />
+        <div class="loading-center-absolute">
+          <div class="object" id="object_one"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_three"></div>
+        </div>
+        <p style="color:#ffffff">Please wait...</p>
+      </div>
+    </div>
+    <!-- End preloading -->
+  </app-root>
+
+  <!-- START JAVASCRIPT -->
+  <script type="text/javascript" src="../assets/dist/js/min.js"></script>
+	<script type="text/javascript" src="../assets/dist/revolution/js/revolution.min.js"></script>
+  <script type="text/template" id="main-example-template">
+    <div class="time <%= label %>">
+    	<span class="count curr top"><%= curr %></span>
+      <span class="count next top"><%= next %></span>
+      <span class="midle-line"></span>
+      <span class="count next bottom"><%= next %></span>
+      <span class="count curr bottom"><%= curr %></span>
+      <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+    </div>
+  </script>
+
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
