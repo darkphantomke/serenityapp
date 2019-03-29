@@ -28,6 +28,6 @@ app.get('*', (req, res) => {
 http.createServer((req, res) => {
     res.writeHead(200);
     res.end();
-  }), app.listen(port, host, () => 
+  }).listen(port, host, () => 
   console.log(`App started on port https://${host}:${port}`)
 );
