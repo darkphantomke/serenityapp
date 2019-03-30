@@ -21,13 +21,15 @@ mongoose.connect(uri, { useNewUrlParser: true }, (err) => {
     }
 });
 
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
-});
+});*/
 
 http.createServer((req, res) => {
-    res.writeHead(200);
+    res.writeHead(200, app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '/public/index.html'));
+    }));
     res.end();
-  }).listen(port, host, () => 
-  console.log(`App started on port https://${host}:${port}`)
+  }), app.listen(port, host, () => 
+  console.log(`App started on port http://${host}:${port}`)
 );
